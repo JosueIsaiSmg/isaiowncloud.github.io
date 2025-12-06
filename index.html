@@ -5,7 +5,7 @@
     <title>Redirect</title>
     <script>
       // Siempre pedir la versión fresca del JSON
-      fetch("redirect.json", {cache:"no-store"})
+      fetch("redirect.json?ts=" + Date.now(), {cache:"no-store"})
         .then(r => r.json())
         .then(data => window.location.replace(data.url));
     </script>
